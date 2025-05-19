@@ -79,7 +79,7 @@
         this.startTime = Date.now();
     },
     on_load: function() {
-        let countdown = 10; 
+        let countdown3 = 10; 
         let button = document.querySelector("button");
         button.disabled = true; // 初始时禁用按钮
         document.getElementById("countdown3").textContent = countdown; 
@@ -401,7 +401,7 @@
     <p>您通过本次实验获得的代币可以捐赠给一个慈善项目。</p>
     <p>您能够<b>自行决定</b>代币的处置方式，既可以选择将全部代币转化为真实货币纳入被试费，也可以考虑捐赠部分代币以助力慈善项目，同时留存剩余部分转化成真钱。</p>
     <p>请阅读并理解后按下键继续。</p>`,
-    choices: ['继续 (<span id="countdown1"></span>)'],
+    choices: ['继续 (<span id="countdown11"></span>)'],
     on_start: function() {
         this.startTime = Date.now();
     },
@@ -409,7 +409,7 @@
         let countdown = 15; 
         let button = document.querySelector("button");
         button.disabled = true; // 初始时禁用按钮
-        document.getElementById("countdown1").textContent = countdown; 
+        document.getElementById("countdown11").textContent = countdown; 
 
         const interval = setInterval(() => {
             countdown -= 1;
@@ -448,7 +448,7 @@
                oninput="if(value.length>2)value=value.slice(0,2);" required
                style="width:100px; height:30px;" />
       </p>
-      <p id="countdown">请仔细阅读材料，15秒后进行捐赠(按键输入)...</p>
+      <p id="countdown2">请仔细阅读材料，15秒后进行捐赠(按键输入)...</p>
       <button type="submit" id="donate-button" 
               style="display:none; border:none; background-color:#f1f1f1; padding:10px 20px; font-size:16px; cursor:pointer; border-radius:4px;">
         捐赠
@@ -456,7 +456,7 @@
     </form> `,
   button_label: null,
   on_load: function() {
-    var countdownElement = document.getElementById("countdown");
+    var countdownElement = document.getElementById("countdown2");
     var buttonElement = document.getElementById("donate-button");
     var seconds = 15;
 
