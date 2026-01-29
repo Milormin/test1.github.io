@@ -508,16 +508,17 @@
             block:7},
     };
 
-
     var welcome2 = {
     type: jsPsychHtmlButtonResponse,
-    stimulus: `<p style="font-size: 22px">感谢您参与本次实验！</p>
+    stimulus: `<p style="font-size: 20px">感谢您参与本次实验！</p>
     <p style="font-size: 20px">在实验过程中，您展现出了良好的表现与配合度。</p>
+    <p style="font-size: 22px;color:red;"><b>接下来，请您仔细阅读以下文字：</b></p>
     <p style="font-size: 20px">我们非常感谢您为这项研究付出的时间和精力，为此，您将一共获得<b style="color:red; font-size: 22px"> 50 代币</b>作为您的报酬。</p>
-    <p style="font-size: 20px">这些代币可以<b style="color:red; font-size: 22px">转换为真钱</b>，成为您的实验费用。</p>
+    <p style="font-size: 22px"><b style="color:red;">这些代币可以<b style="font-size: 24px;color:orange;">转换为真钱</b>，成为您的实验费用。</b></p>
     <p style="font-size: 20px">此外，我们的实验室与一个致力于公益事业的慈善组织合作。</p>
     <p style="font-size: 20px">您通过本次实验获得的代币可以捐赠给一个慈善项目。</p>
-    <p style="font-size: 20px">您能够<b style="font-size: 22px">自行决定</b>代币的处置方式，既可以选择将全部代币转化为真实货币纳入被试费，也可以考虑捐赠部分代币以助力慈善项目，同时留存剩余部分转化成真钱。</p>
+    <p style="font-size: 20px">您能够<b style="font-size: 24px;color:red;">自行决定</b>代币的处置方式，</p>
+    <p style="font-size: 20px">可以选择将全部代币转化为真实货币纳入被试费，也可以考虑捐赠部分代币以助力慈善项目，还可以选择捐赠全部代币。</p>
     <p style="font-size: 20px">请阅读并理解后按下键继续。</p>`,
     choices: ['继续 (<span id="countdown11"></span>)'],
     on_start: function() {
@@ -539,10 +540,8 @@
                 button.disabled = false; // 倒计时结束后启用按钮
             }
         }, 1000);
-    },};
-
-
-
+    },
+};
 
 
    var donation22_actionvalue = {
@@ -796,7 +795,7 @@
 
 
    
-    var timeline = [Sub,Gender,Age,welcome,instructions_block1,block1,instructions_block2,block2,instructions_block3,block3,instructions_block4,block4,instructions_block5,block5,instructions_block6,block6,instructions_block7,block7,welcome2];
+    var timeline = [/*Sub,Gender,Age,welcome,instructions_block1,block1,instructions_block2,block2,instructions_block3,block3,instructions_block4,block4,instructions_block5,block5,instructions_block6,block6,instructions_block7,block7,*/welcome2];
     // 随机选择捐款项目
     var random_donation = jsPsych.randomization.sampleWithoutReplacement(['donation22', 'donation6'], 1)[0];
 
